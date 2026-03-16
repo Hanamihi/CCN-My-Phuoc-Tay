@@ -70,7 +70,7 @@ export default function Contact() {
         <div className="bg-blue-600 rounded-3xl overflow-hidden shadow-2xl">
           <div className="grid lg:grid-cols-2">
             
-            <div className="p-10 md:p-16 text-white">
+            <div className="px-6 py-10 md:p-16 text-white">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 {t.contact.title}
               </h2>
@@ -126,7 +126,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-white p-10 md:p-16">
+            <div className="bg-white px-6 py-10 md:p-16">
               <h3 className="text-2xl font-bold text-slate-900 mb-6">{t.contact.form_title}</h3>
               <form className="space-y-4" onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-4">

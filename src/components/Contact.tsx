@@ -26,7 +26,7 @@ export default function Contact() {
     if (formData.name && formData.phone && formData.email) {
       setIsSubmitting(true);
       try {
-        const scriptUrl = "https://script.google.com/macros/s/AKfycbweuynzsCnuJ-hBTSiwi0h2tc_rgdE4fLGvuO929c5MN5YdhfxBBtayeXczHEhLkJgt/exec";
+        const scriptUrl = "https://script.google.com/macros/s/AKfycbybV3AJ8w9W0X4BU4CNoePii9Eud_wyWW3bby-F_uATBaA93kJblQAY8Zv4u3iJQzHl/exec";
         
         const formBody = new FormData();
         formBody.append("name", formData.name);

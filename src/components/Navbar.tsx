@@ -29,7 +29,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className={`flex items-center gap-2 font-bold text-xl ${isScrolled ? "text-slate-900" : "text-white"}`}>
           <Factory className={`w-8 h-8 ${isScrolled ? "text-emerald-600" : "text-emerald-400"}`} />
-          <span>CCN MỸ PHƯỚC TÂY</span>
+          <span>{t.nav.brand}</span>
         </div>
 
         {/* Desktop Menu */}

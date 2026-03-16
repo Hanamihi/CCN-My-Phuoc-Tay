@@ -3,6 +3,7 @@ export type Language = 'vi' | 'en';
 export const translations = {
   vi: {
     nav: {
+      brand: "CCN MỸ PHƯỚC TÂY",
       overview: "Tổng quan",
       location: "Vị trí",
       industries: "Ngành nghề",
@@ -177,6 +178,7 @@ export const translations = {
   },
   en: {
     nav: {
+      brand: "MY PHUOC TAY IC",
       overview: "Overview",
       location: "Location",
       industries: "Industries",

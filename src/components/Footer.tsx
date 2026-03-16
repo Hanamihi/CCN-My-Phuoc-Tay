@@ -1,6 +1,9 @@
 import { Factory } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext"; // Import hook ngôn ngữ
 
 export default function Footer() {
+  const { t } = useLanguage(); // Khởi tạo hàm t
+
   return (
     <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
       <div className="container mx-auto px-4">
@@ -11,25 +14,25 @@ export default function Footer() {
               CCN MỸ PHƯỚC TÂY
             </div>
             <p className="max-w-md text-sm leading-relaxed">
-              Cụm Công nghiệp Mỹ Phước Tây - Điểm đến đầu tư lý tưởng tại Tiền Giang với hạ tầng đồng bộ, 
-              pháp lý hoàn chỉnh và chính sách ưu đãi vượt trội.
+              {t.footer.description} {/* Sử dụng bản dịch */}
             </p>
           </div>
           
           <div>
-            <h4 className="text-white font-bold mb-4">Liên Kết Nhanh</h4>
+            <h4 className="text-white font-bold mb-4">{t.footer.quick_links}</h4> {/* Sử dụng bản dịch */}
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Tổng quan</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Vị trí</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Ngành nghề</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Ưu đãi</a></li>
+              {/* Tái sử dụng các khóa từ nav để đảm bảo đồng bộ */}
+              <li><a href="#overview" className="hover:text-blue-400 transition-colors">{t.nav.overview}</a></li>
+              <li><a href="#location" className="hover:text-blue-400 transition-colors">{t.nav.location}</a></li>
+              <li><a href="#industries" className="hover:text-blue-400 transition-colors">{t.nav.industries}</a></li>
+              <li><a href="#incentives" className="hover:text-blue-400 transition-colors">{t.nav.incentives}</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-4">Liên Hệ</h4>
+            <h4 className="text-white font-bold mb-4">{t.footer.contact}</h4> {/* Sử dụng bản dịch */}
             <ul className="space-y-2 text-sm">
-              <li>Phường Mỹ Phước Tây, TX. Cai Lậy, Tiền Giang</li>
+              <li>{t.footer.address}</li>
               <li>contact@sonphuctiengiang.com</li>
               <li>(+84) 909 123 456</li>
             </ul>
@@ -37,7 +40,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-slate-800 pt-8 text-center text-xs">
-          © {new Date().getFullYear()} CÔNG TY TNHH SƠN PHÚC TIỀN GIANG. All rights reserved.
+          © {new Date().getFullYear()} {t.footer.copyright}
         </div>
       </div>
     </footer>

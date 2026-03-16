@@ -31,7 +31,7 @@ export default function Location() {
             className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-full font-semibold transition-colors shadow-lg hover:shadow-emerald-500/30"
           >
             <Map className="w-5 h-5" />
-            {language === 'vi' ? 'Xem vị trí dự án' : 'View Project Location'}
+            {language === 'vi' ? 'Xem vị trí dự án trên Google Map' : 'View Project Location on Google Map'}
           </a>
         </div>
 

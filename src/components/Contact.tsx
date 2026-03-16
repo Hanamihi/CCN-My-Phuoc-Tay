@@ -22,12 +22,10 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (formData.name && formData.phone && formData.email) {
       setIsSubmitting(true);
       try {
         const scriptUrl = "https://script.google.com/macros/s/AKfycbybV3AJ8w9W0X4BU4CNoePii9Eud_wyWW3bby-F_uATBaA93kJblQAY8Zv4u3iJQzHl/exec";
-        
         const formBody = new FormData();
         formBody.append("name", formData.name);
         formBody.append("email", formData.email);
@@ -41,7 +39,6 @@ export default function Contact() {
           mode: "no-cors"
         });
 
-        // Open PDF in new tab based on language
         const url = BROCHURE_URLS[language];
         window.open(url, "_blank");
       } catch (error) {
@@ -58,29 +55,27 @@ export default function Contact() {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
-    <section className="py-20 bg-white" id="contact">
+    <section className="py-12 md:py-20 bg-white" id="contact">
       <div className="container mx-auto px-4">
         <div className="bg-blue-600 rounded-3xl overflow-hidden shadow-2xl">
           <div className="grid lg:grid-cols-2">
             
-            <div className="px-6 py-10 md:p-16 text-white">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            {/* CỘT TRÁI: THÔNG TIN LIÊN HỆ */}
+            <div className="px-6 py-10 md:p-16 text-white border-b lg:border-b-0 lg:border-r border-blue-500/30">
+              <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">
                 {t.contact.title}
               </h2>
-              <p className="text-blue-100 text-lg mb-8">
+              <p className="text-blue-100 text-base md:text-lg mb-8">
                 {t.contact.description}
               </p>
 
-              <div className="space-y-6 mb-12">
+              <div className="space-y-6 mb-8 md:mb-12">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
@@ -89,23 +84,25 @@ export default function Contact() {
                   </div>
                 </div>
                 
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className="min-w-0"> {/* Chống tràn email */}
                     <div className="text-xs text-blue-200 uppercase tracking-wider">{t.contact.labels.email}</div>
-                    <div className="font-bold text-lg">contact@sonphuctiengiang.com</div>
+                    <div className="font-bold text-base md:text-lg break-all">{t.contact.labels.email_value || 'contact@sonphuctiengiang.com'}</div>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                     <Building className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <div className="text-xs text-blue-200 uppercase tracking-wider">{t.contact.labels.investor}</div>
-                    <div className="font-bold text-lg">CÔNG TY TNHH SƠN PHÚC TIỀN GIANG</div>
+                    <div className="font-bold text-base md:text-lg break-words uppercase">
+                      CÔNG TY TNHH SƠN PHÚC TIỀN GIANG
+                    </div>
                     <a 
                       href="https://sonphuc.vn/" 
                       target="_blank" 
@@ -118,14 +115,15 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-blue-700/50 p-6 rounded-xl border border-blue-500/30">
-                <h4 className="font-bold mb-2">{t.contact.process_title}</h4>
+              <div className="bg-blue-700/50 p-5 md:p-6 rounded-xl border border-blue-500/30">
+                <h4 className="font-bold mb-2 text-sm md:text-base">{t.contact.process_title}</h4>
                 <p className="text-sm text-blue-100">
                   {t.contact.process_desc}
                 </p>
               </div>
             </div>
 
+            {/* CỘT PHẢI: FORM ĐĂNG KÝ */}
             <div className="bg-white px-6 py-10 md:p-16">
               <h3 className="text-2xl font-bold text-slate-900 mb-6">{t.contact.form_title}</h3>
               <form className="space-y-4" onSubmit={handleSubmit}>
@@ -137,7 +135,7 @@ export default function Contact() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" 
+                      className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-base" 
                       placeholder={t.contact.form_placeholders.name}
                       required 
                     />
@@ -149,7 +147,7 @@ export default function Contact() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" 
+                      className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-base" 
                       placeholder={t.contact.form_placeholders.phone}
                       required 
                     />
@@ -163,7 +161,7 @@ export default function Contact() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" 
+                    className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-base" 
                     placeholder={t.contact.form_placeholders.email}
                     required 
                   />
@@ -176,7 +174,7 @@ export default function Contact() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" 
+                    className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-base" 
                     placeholder={t.contact.form_placeholders.company} 
                   />
                 </div>
@@ -187,7 +185,7 @@ export default function Contact() {
                     name="needs"
                     value={formData.needs}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all bg-white"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all bg-white text-base"
                   >
                     {t.contact.form_options.map((option, index) => (
                       <option key={index} value={option}>{option}</option>

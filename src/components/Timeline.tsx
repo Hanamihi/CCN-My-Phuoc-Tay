@@ -30,37 +30,47 @@ export default function Timeline() {
         </div>
 
         {/* PART 1: TIMELINE (Implementation Progress) */}
-        <div className="mb-24 max-w-5xl mx-auto">
-           <h3 className="text-2xl font-bold mb-10 text-center flex items-center justify-center gap-4">
-              <span className="w-12 h-1.5 bg-blue-600 rounded-full"></span>
-              <span className="uppercase tracking-wide">{t.timeline.timeline_title}</span>
-              <span className="w-12 h-1.5 bg-blue-600 rounded-full"></span>
-            </h3>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-                {t.timeline.milestones.map((milestone, index) => (
-                    <motion.div 
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.2 }}
-                        className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative overflow-hidden group hover:shadow-xl transition-all"
-                    >
-                        <div className={`absolute top-0 left-0 w-2 h-full ${index === 0 ? 'bg-blue-600' : 'bg-emerald-500'}`}></div>
-                        <span className={`text-6xl font-black opacity-5 absolute top-2 right-4 ${index === 0 ? 'text-blue-600' : 'text-emerald-600'}`}>
-                            0{index + 1}
-                        </span>
-                        
-                        <div className={`inline-block px-4 py-1.5 rounded-full text-sm font-bold mb-5 ${index === 0 ? 'bg-blue-100 text-blue-700' : 'bg-emerald-100 text-emerald-700'}`}>
-                            {milestone.date}
-                        </div>
-                        <h4 className="text-xl font-bold text-slate-900 mb-3">{milestone.title}</h4>
-                        <p className="text-slate-600 leading-relaxed">{milestone.desc}</p>
-                    </motion.div>
-                ))}
-            </div>
+<div className="mb-24 max-w-6xl mx-auto">
+  <h3 className="text-2xl font-bold mb-10 text-center flex items-center justify-center gap-4">
+    <span className="w-12 h-1.5 bg-blue-600 rounded-full"></span>
+    <span className="uppercase tracking-wide">{t.timeline.timeline_title}</span>
+    <span className="w-12 h-1.5 bg-blue-600 rounded-full"></span>
+  </h3>
+  
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {t.timeline.milestones.map((milestone, index) => (
+      <motion.div 
+        key={index}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: index * 0.2 }}
+        className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative overflow-hidden group hover:shadow-xl transition-all"
+      >
+        {/* Màu sắc linh hoạt: Mốc 1 xanh dương, Mốc 2 hổ phách (tùy chọn), Mốc 3 xanh lá */}
+        <div className={`absolute top-0 left-0 w-full h-1.5 ${
+          index === 0 ? 'bg-blue-600' : index === 1 ? 'bg-amber-500' : 'bg-emerald-500'
+        }`}></div>
+        
+        <span className={`text-6xl font-black opacity-5 absolute top-2 right-4 ${
+          index === 0 ? 'text-blue-600' : index === 1 ? 'text-amber-600' : 'text-emerald-600'
+        }`}>
+          0{index + 1}
+        </span>
+        
+        <div className={`inline-block px-4 py-1.5 rounded-full text-sm font-bold mb-5 ${
+          index === 0 ? 'bg-blue-100 text-blue-700' : 
+          index === 1 ? 'bg-amber-100 text-amber-700' : 
+          'bg-emerald-100 text-emerald-700'
+        }`}>
+          {milestone.date}
         </div>
+        <h4 className="text-xl font-bold text-slate-900 mb-3">{milestone.title}</h4>
+        <p className="text-slate-600 leading-relaxed text-sm">{milestone.desc}</p>
+      </motion.div>
+    ))}
+  </div>
+</div>
 
         {/* PART 2: WHY CHOOSE (SWOT) */}
         <div className="max-w-7xl mx-auto">

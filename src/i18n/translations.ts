@@ -150,7 +150,7 @@ export const translations = {
         investor: "Chủ Đầu Tư"
       },
       process_title: "Quy trình đơn giản",
-      process_desc: "Chỉ cần 10 bước để ký Hợp đồng Thuê Lại Đất và nhận bàn giao đất. Đội ngũ pháp lý của chúng tôi sẽ hỗ trợ trọn gói.",
+      process_desc: "Thủ tục nhanh chóng để ký Hợp đồng Thuê Lại Đất và nhận bàn giao đất. Đội ngũ pháp lý của chúng tôi sẽ hỗ trợ trọn gói.",
       form_title: "Đăng Ký Nhận Thông Tin",
       form_labels: {
         name: "Họ và tên",
@@ -331,7 +331,7 @@ export const translations = {
         investor: "Investor"
       },
       process_title: "Simple Process",
-      process_desc: "Only 10 steps to sign the Land Sublease Agreement and receive land handover. Our legal team will support the full package.",
+      process_desc: "Simple steps to sign the Land Sublease Agreement and receive land handover. Our legal team will support the full package.",
       form_title: "Register for Information",
       form_labels: {
         name: "Full Name",

@@ -80,7 +80,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-xs text-blue-200 uppercase tracking-wider">{t.contact.labels.hotline}</div>
-                    <div className="font-bold text-lg">0909 123 456</div>
+                    <div className="font-bold text-lg">0988398131 (Mr. Thanh)</div>
                   </div>
                 </div>
                 
@@ -90,7 +90,7 @@ export default function Contact() {
                   </div>
                   <div className="min-w-0"> {/* Chống tràn email */}
                     <div className="text-xs text-blue-200 uppercase tracking-wider">{t.contact.labels.email}</div>
-                    <div className="font-bold text-base md:text-lg break-all">{t.contact.labels.email_value || 'contact@sonphuctiengiang.com'}</div>
+                    <div className="font-bold text-base md:text-lg break-all">{t.contact.labels.email_value || 'thanhnt@sonphuc.vn'}</div>
                   </div>
                 </div>
 

@@ -100,17 +100,22 @@ export const translations = {
       title_highlight: "Lợi Thế Cạnh Tranh",
       timeline_title: "Tiến Độ Triển Khai",
       milestones: [
-        {
-          date: "Q3/2026",
-          title: "Khởi Công Hạ Tầng Kỹ Thuật",
-          desc: "Bắt đầu xây dựng hệ thống đường giao thông, điện, nước và xử lý nước thải."
-        },
-        {
-          date: "Q4/2027",
-          title: "Hoàn Thành & Khai Thác",
-          desc: "Bàn giao đất cho nhà đầu tư, chính thức đi vào hoạt động sản xuất."
-        }
-      ],
+    {
+      date: "Q3/2026",
+      title: "Khởi Công Hạ Tầng Kỹ Thuật",
+      desc: "Bắt đầu xây dựng hệ thống đường giao thông, điện, nước và xử lý nước thải."
+    },
+    {
+      date: "Q3/2027",
+      title: "Hoàn thành xây dựng Hạ tầng Kỹ thuật",
+      desc: "Nghiệm thu toàn bộ hệ thống hạ tầng, đảm bảo sẵn sàng kết nối cho các nhà máy."
+    },
+    {
+      date: "Q4/2027",
+      title: "Hoàn Thành & Khai Thác",
+      desc: "Bàn giao đất cho nhà đầu tư, chính thức đi vào hoạt động sản xuất."
+    }
+  ],
       swot_title: "Tại Sao Chọn Mỹ Phước Tây?",
       swot_items: [
         {
@@ -275,17 +280,22 @@ export const translations = {
       title_highlight: "Competitive Advantages",
       timeline_title: "Implementation Progress",
       milestones: [
-        {
-          date: "Q3/2026",
-          title: "Technical Infrastructure Groundbreaking",
-          desc: "Start construction of traffic roads, electricity, water, and wastewater treatment systems."
-        },
-        {
-          date: "Q4/2027",
-          title: "Completion & Operation",
-          desc: "Handover of land to investors, officially going into production operation."
-        }
-      ],
+{
+Date: "Q3/2026",
+Title: "Infrastructure Construction Commencement",
+Desc: "Construction of road, electricity, water, and wastewater treatment systems begins."
+},
+{
+Date: "Q3/2027",
+Title: "Infrastructure Construction Completion",
+Desc: "Acceptance of the entire infrastructure system, ensuring readiness for connection to the factories."
+},
+{
+Date: "Q4/2027",
+Title: "Completion & Operation",
+Desc: "Land handover to the investor, officially commencing production."
+}
+],
       swot_title: "Why Choose My Phuoc Tay?",
       swot_items: [
         {

@@ -282,22 +282,22 @@ export const translations = {
       title_highlight: "Competitive Advantages",
       timeline_title: "Implementation Progress",
       milestones: [
-{
-Date: "Q3/2026",
-Title: "Infrastructure Construction Commencement",
-Desc: "Construction of road, electricity, water, and wastewater treatment systems begins."
-},
-{
-Date: "Q3/2027",
-Title: "Infrastructure Construction Completion",
-Desc: "Acceptance of the entire infrastructure system, ensuring readiness for connection to the factories."
-},
-{
-Date: "Q4/2027",
-Title: "Completion & Operation",
-Desc: "Land handover to the investor, officially commencing production."
-}
-],
+    {
+      date: "Q3/2026",
+      title: "Infrastructure Construction Commencement",
+      desc: "Construction of road, electricity, water, and wastewater treatment systems begins."
+    },
+    {
+      date: "Q3/2027",
+      title: "Infrastructure Construction Completion",
+      desc: "Acceptance of the entire infrastructure system, ensuring readiness for connection to the factories."
+    },
+    {
+      date: "Q4/2027",
+      title: "Completion & Operation",
+      desc: "Land handover to the investor, officially commencing production."
+    }
+  ],
       swot_title: "Why Choose My Phuoc Tay?",
       swot_items: [
         {

@@ -37,6 +37,7 @@ export default function Timeline() {
     <span className="w-12 h-1.5 bg-blue-600 rounded-full"></span>
   </h3>
   
+  {/* Thay đổi md:grid-cols-2 thành lg:grid-cols-3 để hiển thị 3 cột */}
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {t.timeline.milestones.map((milestone, index) => (
       <motion.div 
@@ -47,7 +48,7 @@ export default function Timeline() {
         transition={{ delay: index * 0.2 }}
         className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative overflow-hidden group hover:shadow-xl transition-all"
       >
-        {/* Màu sắc linh hoạt: Mốc 1 xanh dương, Mốc 2 hổ phách (tùy chọn), Mốc 3 xanh lá */}
+        {/* Màu sắc động cho từng mốc: 01-Xanh dương, 02-Hổ phách, 03-Xanh lá */}
         <div className={`absolute top-0 left-0 w-full h-1.5 ${
           index === 0 ? 'bg-blue-600' : index === 1 ? 'bg-amber-500' : 'bg-emerald-500'
         }`}></div>

@@ -36,7 +36,7 @@ export const translations = {
       legal_items: [
         "• Quyết định Chấp thuận chủ trương đầu tư (19/02/2025)",
         "• Quyết định Thành lập CCN (26/06/2025)",
-        "• Quyết định Phê duyệt quy hoạch chi tiết 1/500 (01/12/2025)"
+        "• Quyết định Phê duyệt quy hoạch chi tiết 1/500 (01/12/2025)",
         "• Quyết định Phê duyệt phương án bồi thường GPMB/ QĐ giao đất"
       ]
     },
@@ -217,7 +217,7 @@ export const translations = {
       legal_items: [
         "• Investment Policy Approval Decision (Feb 19, 2025)",
         "• Cluster Establishment Decision (Jun 26, 2025)",
-        "• 1/500 Detailed Planning Approval Decision (Dec 01, 2025)"
+        "• 1/500 Detailed Planning Approval Decision (Dec 01, 2025)",
         "• Decision approving the compensation plan for land clearance/ Decision on land allocation"
       ]
     },

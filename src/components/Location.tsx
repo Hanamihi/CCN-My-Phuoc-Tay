@@ -45,7 +45,7 @@ export default function Location() {
           >
             {/* Placeholder for Map Image */}
             <img 
-              src="https://i.postimg.cc/fW9xvJDK/3.png" 
+              src="https://i.postimg.cc/63psTtCY/1A.jpg" 
               alt="Logistics and Transport Hub" 
               className="w-full h-full object-cover"
             />

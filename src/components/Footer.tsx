@@ -33,8 +33,8 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-4">{t.footer.contact}</h4> {/* Sử dụng bản dịch */}
             <ul className="space-y-2 text-sm">
               <li>{t.footer.address}</li>
-              <li>contact@sonphuctiengiang.com</li>
-              <li>(+84) 909 123 456</li>
+              <li>thanhnt@sonphuc.vn</li>
+              <li>0988398131</li>
             </ul>
           </div>
         </div>

@@ -85,7 +85,7 @@ export default function Overview() {
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               {/* Placeholder for Project Overview Image */}
               <img 
-                src="https://i.postimg.cc/QNTpqHhm/4.png" 
+                src="https://i.postimg.cc/507hCTmR/4.png" 
                 alt="Modern Factory Building at My Phuoc Tay" 
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
